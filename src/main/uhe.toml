@@ -1,3 +1,7 @@
 [local]
-ip =
+ip = 127.0.0.1
 port = 10085
+
+[request_type]
+apply = true
+login = true
