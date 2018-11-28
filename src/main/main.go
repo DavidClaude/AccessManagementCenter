@@ -7,6 +7,7 @@ import (
 	"github.com/valyala/fasthttp"
 	"strconv"
 	"service"
+	"fmt"
 )
 
 func init() {
@@ -34,6 +35,8 @@ func init() {
 }
 
 func main() {
+	fmt.Println("HTTP server started...")
+	fmt.Printf("IP: %s, port: %d\n", singletons.IP, singletons.Port)
 	err := fasthttp.ListenAndServe(singletons.IP+":"+strconv.Itoa(singletons.Port), service.HttpHandle)
 	if err != nil {
 		log.Fatal(err)

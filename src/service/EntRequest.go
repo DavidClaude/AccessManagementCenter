@@ -26,7 +26,9 @@ type EntRequestData struct {
 
 func NewEntRequest(req *fasthttp.RequestCtx) (ent *EntRequest) {
 	header := &EntRequestHeader{
-		ReqType: strings.TrimSpace(string(req.Request.Header.Peek("type"))),
+		ReqType:   strings.TrimSpace(string(req.Request.Header.Peek("req_type"))),
+		TimeStamp: strings.TrimSpace(string(req.Request.Header.Peek("time_stamp"))),
+		UserName:  strings.TrimSpace(string(req.Request.Header.Peek("user_name"))),
 	}
 	body := req.PostBody()
 	data := &EntRequestData{
@@ -56,6 +58,7 @@ func (er *EntRequest) Check() (err error, desc string) {
 	if err != nil {
 		return err, err.Error()
 	}
+
 	tsInt64, err := strconv.ParseInt(er.Header.TimeStamp, 10, 64)
 	if err != nil {
 		return err, err.Error()

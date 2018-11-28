@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4477c3a8-d9c8-4342-9a3f-4c0ea9bc7dfd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/uhe.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ConfigAdapter.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ConfigAdapter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/EntRequest.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/EntRequest.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/HttpDispatcher.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/HttpDispatcher.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/SqlAdapter.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/SqlAdapter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ttools/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ttools/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,20 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Consts.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/Consts.go">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="558">
+              <caret line="39" column="96" lean-forward="true" selection-start-line="39" selection-start-column="96" selection-end-line="39" selection-end-column="96" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/main.go">
+      <file leaf-file-name="LocalHost.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/generic-op/singletons/LocalHost.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="72">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -47,16 +45,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpDispatcher.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HttpDispatcher.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/HttpDispatcher.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="363">
+              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="encode.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../IDE/go/src/encoding/json/encode.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/build.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -65,20 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormatFunc.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/generic-op/utils/FormatFunc.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SqlAdapter.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/SqlAdapter.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="306">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -86,8 +84,8 @@
       <file leaf-file-name="EntRequest.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/EntRequest.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="100">
+              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -95,8 +93,8 @@
       <file leaf-file-name="TomlConfiguration.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -104,8 +102,8 @@
       <file leaf-file-name="main.toml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/main.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="162">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -118,6 +116,14 @@
         <option value="Go File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>is not in config</find>
+    </findStrings>
+    <dirStrings>
+      <dir>D:\CanCui\My Projects\DacLibGitHttpServer\UserHttpEntrance</dir>
+    </dirStrings>
   </component>
   <component name="GOROOT" path="$PROJECT_DIR$/../../../IDE/go" />
   <component name="Git.Settings">
@@ -150,17 +156,17 @@
         <option value="$PROJECT_DIR$/src/service/consts.go" />
         <option value="$PROJECT_DIR$/src/service/http_svc.go" />
         <option value="$PROJECT_DIR$/src/service/sql_adapter.go" />
-        <option value="$PROJECT_DIR$/src/main/main.toml" />
         <option value="$PROJECT_DIR$/src/generic-op/singletons/ReflectionTable.go" />
         <option value="$PROJECT_DIR$/src/service/ReflectionTable.go" />
-        <option value="$PROJECT_DIR$/src/service/EntRequest.go" />
         <option value="$PROJECT_DIR$/src/service/Consts.go" />
-        <option value="$PROJECT_DIR$/src/service/HttpDispatcher.go" />
-        <option value="$PROJECT_DIR$/src/main/main.go" />
         <option value="$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go" />
         <option value="$PROJECT_DIR$/src/service/ConfigAdapter.go" />
         <option value="$PROJECT_DIR$/src/service/SqlAdapter.go" />
         <option value="$PROJECT_DIR$/src/main/build.sh" />
+        <option value="$PROJECT_DIR$/src/main/main.toml" />
+        <option value="$PROJECT_DIR$/src/main/main.go" />
+        <option value="$PROJECT_DIR$/src/service/EntRequest.go" />
+        <option value="$PROJECT_DIR$/src/service/HttpDispatcher.go" />
       </list>
     </option>
   </component>
@@ -271,10 +277,11 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3293348" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
@@ -288,7 +295,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,20 +304,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/vendor/github.com/valyala/fasthttp/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/http_handle.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/generic-op/singletons/local_host.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -521,27 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/ConfigAdapter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -549,31 +520,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/SqlAdapter.go">
+    <entry file="file://$PROJECT_DIR$/src/main/build.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="162">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generic-op/singletons/LocalHost.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../IDE/go/src/encoding/json/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generic-op/codex/TomlConfiguration.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/main.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="39" column="96" lean-forward="true" selection-start-line="39" selection-start-column="96" selection-end-line="39" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/EntRequest.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        <state relative-caret-position="100">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/SqlAdapter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/HttpDispatcher.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="363">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
         </state>
       </provider>
     </entry>

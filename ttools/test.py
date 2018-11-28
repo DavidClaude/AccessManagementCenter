@@ -7,8 +7,6 @@ import base64
 import datetime
 import struct
 
-print("Hello, it's me")
-
 URL = "http://172.16.154.172:10085"  #待修改
 REQ_TYPE = "login"
 USERNAME = "davidclaude"
@@ -33,4 +31,8 @@ def getData(timestamp):
 ts = str(int(time.time()))
 resp = requests.post(URL, data=getData(ts), headers=getHeader(ts))
 
-print resp.content
+code = resp.headers["code"]
+if code != "0":
+    print ("ERROR: " + resp.headers["err"] + ", DESC: " + resp.headers["desc"])
+else:
+    print ("OK")

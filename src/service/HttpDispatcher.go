@@ -3,8 +3,8 @@ package service
 import (
 	"github.com/valyala/fasthttp"
 	"errors"
-	"generic-op/utils"
 	"strconv"
+	"generic-op/utils"
 )
 
 type RequestHandler func(ent *EntRequest) (code int, err error, desc string)
@@ -23,12 +23,17 @@ Get the code and result, response for client
 func HttpHandle(req *fasthttp.RequestCtx) () {
 	code, err, desc := httpService(req)
 	req.Response.Header.Set("code", strconv.Itoa(code))
-	req.Response.Header.Set("err", err.Error())
+	if err != nil {
+		req.Response.Header.Set("err", err.Error())
+	} else {
+		req.Response.Header.Set("err", "")
+	}
+
 	req.Response.Header.Set("desc", desc)
 }
 
 /*
-
+Process the request
  */
 func httpService(req *fasthttp.RequestCtx) (result_code int, err error, desc string) {
 
@@ -50,10 +55,16 @@ func httpService(req *fasthttp.RequestCtx) (result_code int, err error, desc str
 	return result_code, err, desc
 }
 
+/*
+Channel to apply for user data
+ */
 func reqChannel_apply(ent *EntRequest) (code int, err error, desc string) {
 	return 0, nil, ""
 }
 
+/*
+Channel to login
+ */
 func reqChannel_login(ent *EntRequest) (code int, err error, desc string) {
 	userData, err := GetUserDataFromSql(ent.Header.UserName)
 	if err != nil {
