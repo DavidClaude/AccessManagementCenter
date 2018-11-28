@@ -26,3 +26,12 @@ func GetUserDataFromSql(userName string) (userData *UserData, err error) {
 	}
 	return userData, nil
 }
+
+func ContainUserName(userName string) (ok bool, err error) {
+   pwd, ok := sim_db[userName]
+   if ok {
+      return true, nil
+   }
+   return false, nil
+   
+}
