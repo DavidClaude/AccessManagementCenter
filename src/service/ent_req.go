@@ -12,8 +12,9 @@ type EntRequest struct {
 }
 
 type EntRequestHeader struct {
-	ReqType string `json:"type"`
+	ReqType string `json:"req_type"`
 	TimeStamp string `json:"timestamp"`
+	UserName string `json:"user_name"`
 }
 
 type EntRequestData struct {
@@ -54,4 +55,5 @@ func (er *EntRequest)Check()(err error, desc string)  {
 	if (l <= 0){
 		return errors.New("empty data"), "data is empty"
 	}
+	return nil, ""
 }
