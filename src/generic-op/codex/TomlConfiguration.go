@@ -13,7 +13,7 @@ type TomlConfig struct {
 }
 
 func (tc *TomlConfig) Init(path string) (err error) {
-	tc.file, err = ini.Load("uhe.toml")
+	tc.file, err = ini.Load(path)
 	if err != nil {
 		fmt.Println(err.Error())
 		return err
@@ -59,6 +59,25 @@ func (tc *TomlConfig) GetInt(sec, key string) (val int, err error) {
 		return 0, errors.New("no key")
 	}
 	val, err = strconv.Atoi(v)
+	if err != nil {
+		fmt.Println(err.Error())
+		return 0, err
+	}
+	return val, nil
+}
+
+func (tc *TomlConfig) GetInt64(sec, key string) (val int64, err error) {
+	table, ok := tc.tables[sec]
+	if !ok {
+		fmt.Printf("Section: %s is not in config", sec)
+		return 0, errors.New("no section")
+	}
+	v, ok := table[key]
+	if !ok {
+		fmt.Printf("Key: %s is not in config", key)
+		return 0, errors.New("no key")
+	}
+	val, err = strconv.ParseInt(v, 10, 64)
 	if err != nil {
 		fmt.Println(err.Error())
 		return 0, err

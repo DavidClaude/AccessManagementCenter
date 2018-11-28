@@ -11,7 +11,7 @@ import (
 
 func init() {
 	// Init configuration
-	service.ConfigInitAndFill("uhe.toml", "local", "request_type")
+	service.ConfigInitAndFill("main.toml", "local", "request_type", "check")
 
 	// Init IP and port
 	ip, err := service.Config.GetString("local", "ip")

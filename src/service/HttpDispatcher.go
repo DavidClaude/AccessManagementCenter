@@ -3,44 +3,67 @@ package service
 import (
 	"github.com/valyala/fasthttp"
 	"errors"
+	"generic-op/utils"
+	"strconv"
 )
 
-func HttpHandle(req *fasthttp.RequestCtx) () {
-	code, err, desc, result := httpService(req)
-	if (code == 0) {
-		// todo return success
-	} else {
-		// todo return error
-	}
+type RequestHandler func(ent *EntRequest) (code int, err error, desc string)
+
+var reflectionTable map[string]RequestHandler
+
+func init() {
+	reflectionTable = make(map[string]RequestHandler)
+	reflectionTable["apply"] = reqChannel_apply
+	reflectionTable["login"] = reqChannel_login
 }
 
-func httpService(req *fasthttp.RequestCtx) (code int, err error, desc string, result string) {
+/*
+Get the code and result, response for client
+ */
+func HttpHandle(req *fasthttp.RequestCtx) () {
+	code, err, desc := httpService(req)
+	req.Response.Header.Set("code", strconv.Itoa(code))
+	req.Response.Header.Set("err", err.Error())
+	req.Response.Header.Set("desc", desc)
+}
 
-	// New param
+/*
+
+ */
+func httpService(req *fasthttp.RequestCtx) (result_code int, err error, desc string) {
+
+	// Create ent
 	ent := NewEntRequest(req)
 
-	// Check common info
+	// Check
 	err, desc = ent.Check()
 	if err != nil {
-		return CHECK_ENT_REQ_ERROR, err, desc, ""
+		return ENT_CHECK_ERROR, err, desc
 	}
 
 	// Dispatch due to request type
-	switch ent.Header.ReqType {
-	case "apply":
-		return reqChannel_apply(ent)
-	case "login":
-		return reqChannel_login(ent)
-	default:
-		return INVALID_CHANNEL, errors.New("invalid channel"), "channel is valid", ""
+	h, ok := reflectionTable[ent.Header.ReqType]
+	if !ok {
+		return INVALID_CHANNEL, errors.New(INVALID_CHANNEL_MSG), INVALID_CHANNEL_MSG
 	}
-
+	result_code, err, desc = h(ent)
+	return result_code, err, desc
 }
 
-func reqChannel_apply(ent *EntRequest) (code int, err error, desc string, result string) {
-
+func reqChannel_apply(ent *EntRequest) (code int, err error, desc string) {
+	return 0, nil, ""
 }
 
-func reqChannel_login(ent *EntRequest) (code int, err error, desc string, result string) {
-
+func reqChannel_login(ent *EntRequest) (code int, err error, desc string) {
+	userData, err := GetUserDataFromSql(ent.Header.UserName)
+	if err != nil {
+		return GET_USER_DATA_ERROR, err, err.Error()
+	}
+	checksumMd5 := string(ent.Data.Content)
+	checksumExpected := userData.Password + ent.Header.TimeStamp + userData.UserName
+	checksumExpectedMd5 := utils.Md5Encode(checksumExpected)
+	if checksumMd5 == checksumExpectedMd5 {
+		return SUCCESS, nil, ""
+	}
+	return INCORRECT_PASSWORD, errors.New(INCORRECT_PASSWORD_MSG), INCORRECT_PASSWORD_MSG
 }
