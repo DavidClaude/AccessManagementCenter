@@ -1,10 +1,12 @@
 [local]
 ip =
 port = 10085
-
-[request_type]
-apply = true
-login = true
-
-[check]
 valid_period = 300
+
+[req_tp]
+register = 1
+login = 1
+
+[cnt_tp]
+pwd64 = 1
+chksmd5 = 1

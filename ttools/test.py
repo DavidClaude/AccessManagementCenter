@@ -9,30 +9,29 @@ import struct
 
 URL = "http://172.16.154.172:10085"  #待修改
 REQ_TYPE = "login"
-USERNAME = "davidclaude"
+USERNAME = "davidclaude111"
 PASSWORD = "success0325"
+CNT_TYPE = "chksmd5"
 
 def getHeader(timestamp):
     headers = {
-        "req_type":REQ_TYPE,
-        "time_stamp":timestamp,
-        "user_name":USERNAME,
+        "req_tp":REQ_TYPE,
+        "ts":timestamp,
+        "usr":USERNAME,
+        "cnt_tp":CNT_TYPE
     }
     return headers
 
-def getData(timestamp):
+def getLoginData(timestamp):
     checksum = PASSWORD + timestamp + USERNAME
     m2 = hashlib.md5()
     m2.update(checksum)
     checksumMd5 = m2.hexdigest()
     return bytes(checksumMd5)
 
+def getRegisterData():
+    return bytes(base64.b64encode(PASSWORD))
 
 ts = str(int(time.time()))
-resp = requests.post(URL, data=getData(ts), headers=getHeader(ts))
-
-code = resp.headers["code"]
-if code != "0":
-    print ("ERROR: " + resp.headers["err"] + ", DESC: " + resp.headers["desc"])
-else:
-    print ("OK")
+resp = requests.post(URL, data=getLoginData(ts), headers=getHeader(ts))
+print ("Code: " + resp.headers["code"] + ", desc: " + resp.headers["desc"])

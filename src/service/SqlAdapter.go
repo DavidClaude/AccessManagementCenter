@@ -1,6 +1,8 @@
 package service
 
-import "errors"
+import (
+	"errors"
+)
 
 type UserData struct {
 	UserName string
@@ -15,10 +17,10 @@ func init() {
 	sim_db["user0"] = "123456"
 }
 
-func GetUserDataFromSql(userName string) (userData *UserData, err error) {
+func RequestSqlForUserData(userName string) (userData *UserData, err error) {
 	pwd, ok := sim_db[userName]
 	if !ok {
-		return nil, errors.New(NO_USER_NAME_MSG)
+		return nil, errors.New(NO_USERNAME_MSG)
 	}
 	userData = &UserData{
 		UserName: userName,
@@ -27,11 +29,10 @@ func GetUserDataFromSql(userName string) (userData *UserData, err error) {
 	return userData, nil
 }
 
-func ContainUserName(userName string) (ok bool, err error) {
-   pwd, ok := sim_db[userName]
-   if ok {
-      return true, nil
-   }
-   return false, nil
-   
+func RequestSqlForRegister(userName, password string) (err error) {
+	if _, ok := sim_db[userName]; ok {
+		return errors.New(USERNAME_EXIST_MSG)
+	}
+	sim_db[userName] = password
+	return nil
 }

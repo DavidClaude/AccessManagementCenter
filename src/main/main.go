@@ -12,7 +12,7 @@ import (
 
 func init() {
 	// Init configuration
-	service.ConfigInitAndFill("main.toml", "local", "request_type", "check")
+	service.ConfigInitAndFill("main.toml", "local", "req_tp", "cnt_tp")
 
 	// Init IP and port
 	ip, err := service.Config.GetString("local", "ip")
